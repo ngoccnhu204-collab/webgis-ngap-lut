@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.get("/", (req, res) => res.render("dashboard"));
 app.get("/dashboard", (req, res) => res.render("dashboard"));
 app.get("/map", (req, res) => res.render("map"));
-app.get("/climate", (req, res) => res.render("climate", { climateData: [] }));
+app.get("/data", (req, res) => res.render("data"));
 app.get("/warning", (req, res) => res.render("warning"));
 app.get("/statistics", (req, res) => res.render("statistics"));
 
