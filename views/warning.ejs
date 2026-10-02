@@ -1,122 +1,13 @@
-
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cảnh báo ngập - WebGIS TP.HCM</title>
-<link rel="stylesheet" href="/css/style.css">
+<!DOCTYPE html><html lang="vi"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Cảnh báo ngập - WebGIS TP.HCM</title><link rel="stylesheet" href="/css/style.css">
 <style>
-*{box-sizing:border-box}
-.warning-page{margin-left:0;width:100%;min-height:100vh;padding:28px 35px 40px;background:#f1f6f7}
-.warning-header{margin-bottom:22px}
-.warning-header h1{color:#075f68;font-size:25px;margin:0 0 6px}
-.warning-header p{color:#718287;font-size:13px;margin:0}
-.warning-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-bottom:22px}
-.warning-stat{background:white;border:1px solid #e0ebec;border-radius:11px;padding:17px;display:flex;align-items:center;gap:13px;box-shadow:0 4px 14px #16494d0d}
-.warning-icon{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px}
-.all{background:#e5f2ff}.low{background:#e2f5ed}.medium{background:#fff2d8}.high{background:#ffe5e5}
-.warning-stat span{display:block;color:#7b898d;font-size:11px;margin-bottom:3px}
-.warning-stat strong{color:#075f68;font-size:22px}
-.warning-card{background:white;border:1px solid #e0ebec;border-radius:12px;overflow:hidden;box-shadow:0 4px 15px #16494d0f;margin-bottom:20px}
-.warning-card-header{min-height:64px;padding:0 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e6eeee}
-.warning-card-header h2{color:#075875;font-size:16px;margin:0}
-.warning-card-header span{color:#849396;font-size:11px}
-.warning-notice{margin:18px 20px;padding:14px 16px;background:#fff8e8;border:1px solid #f4dfad;border-left:4px solid #e4a52c;border-radius:8px;display:flex;gap:12px}
-.warning-notice-icon{font-size:20px}
-.warning-notice strong{display:block;color:#916314;font-size:13px;margin-bottom:4px}
-.warning-notice p{margin:0;color:#7e7160;font-size:11px;line-height:1.6}
-.warning-table-wrapper{width:100%;overflow-x:auto}
-.warning-table{width:100%;min-width:950px;border-collapse:collapse}
-.warning-table th{background:#edf7f6;color:#075f68;padding:12px 14px;font-size:11px;text-align:left;white-space:nowrap;border-bottom:1px solid #dcebea}
-.warning-table td{color:#5d7074;padding:13px 14px;font-size:11px;border-bottom:1px solid #edf1f1;white-space:nowrap}
-.warning-table tbody tr:hover{background:#f8fbfb}
-.warning-level{display:inline-block;padding:5px 10px;border-radius:20px;font-size:10px;font-weight:bold}
-.warning-low{color:#247b60;background:#e1f4eb}
-.warning-medium{color:#9b6a13;background:#fff0d1}
-.warning-high{color:#bd4242;background:#ffe2e2}
-.warning-very-high{color:#8f3030;background:#ffd3d3}
-.warning-status{display:inline-flex;align-items:center;gap:6px;color:#35765f;font-size:10px;font-weight:600}
-.status-dot{width:7px;height:7px;border-radius:50%;background:#32a77c}
-.view-warning-btn{border:0;background:#e2f4f1;color:#08766f;padding:6px 11px;border-radius:6px;font-size:10px;cursor:pointer}
-.view-warning-btn:hover{background:#cceae5}
-.warning-info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
-.warning-info{background:white;border:1px solid #e0ebec;border-radius:10px;padding:17px;box-shadow:0 3px 12px #16494d0a}
-.warning-info h3{margin:0 0 7px;color:#075f68;font-size:13px}
-.warning-info p{margin:0;color:#718084;font-size:11px;line-height:1.6}
-@media(max-width:1100px){.warning-stats{grid-template-columns:repeat(2,1fr)}.warning-info-grid{grid-template-columns:1fr}}
-@media(max-width:750px){.warning-page{margin-left:0;width:100%;padding:20px}.warning-stats{grid-template-columns:1fr}}
-</style>
-</head>
-<body>
-<div class="webgis">
-<aside class="sidebar">
-<div class="logo"><div class="logo-text"><strong>Viện Phát triển Xã hội,</strong><strong>Môi trường và Nông nghiệp</strong></div></div>
-<nav class="sidebar-menu">
-<a href="/dashboard" class="menu-item"><span class="menu-icon">⌂</span><span>Trang chủ</span></a>
-<a href="/map" class="menu-item"><span class="menu-icon">🗺</span><span>Bản đồ</span></a>
-<a href="/data" class="menu-item"><span class="menu-icon">🌊</span><span>Dữ liệu ngập</span></a>
-<a href="/warning" class="menu-item active"><span class="menu-icon">⚠</span><span>Cảnh báo</span></a>
-<a href="/statistics" class="menu-item"><span class="menu-icon">▥</span><span>Thống kê</span></a>
-</nav>
-<div class="sidebar-bottom">
-<a href="#"><span class="menu-icon">ⓘ</span><span>Giới thiệu</span></a>
-<a href="/"><span class="menu-icon">↪</span><span>Đăng xuất</span></a>
-</div>
-</aside>
-<main class="warning-page">
-<div class="warning-header">
-<h1>Cảnh báo ngập lụt</h1>
-<p>Theo dõi các khu vực có nguy cơ ngập và các điểm ngập cần chú ý trên địa bàn Thành phố Hồ Chí Minh</p>
-</div>
-<div class="warning-stats">
-<div class="warning-stat"><div class="warning-icon all">⚠️</div><div><span>Tổng cảnh báo</span><strong>10</strong></div></div>
-<div class="warning-stat"><div class="warning-icon low">🟢</div><div><span>Mức độ thấp</span><strong>2</strong></div></div>
-<div class="warning-stat"><div class="warning-icon medium">🟠</div><div><span>Mức độ trung bình</span><strong>4</strong></div></div>
-<div class="warning-stat"><div class="warning-icon high">🔴</div><div><span>Mức độ cao</span><strong>4</strong></div></div>
-</div>
-<div class="warning-card">
-<div class="warning-card-header"><h2>Danh sách cảnh báo</h2><span>Cập nhật: 25/07/2026</span></div>
-<div class="warning-notice"><div class="warning-notice-icon">⚠️</div><div><strong>Lưu ý về tình hình ngập</strong><p>Các điểm có mức độ ngập cao cần được theo dõi và cập nhật thường xuyên. Thông tin hiện tại là dữ liệu minh họa phục vụ thử nghiệm hệ thống.</p></div></div>
-<div class="warning-table-wrapper">
-<table class="warning-table">
-<thead><tr><th>Mã điểm</th><th>Khu vực</th><th>Vị trí</th><th>Độ sâu</th><th>Mức cảnh báo</th><th>Thời gian</th><th>Trạng thái</th><th>Chi tiết</th></tr></thead>
-<tbody>
-<% const warnings=[
-['NG01','Bình Thạnh','Nguyễn Hữu Cảnh','0.60 m','Cao','warning-high','2.5 giờ'],
-['NG02','Quận 7','Lê Văn Lương','0.55 m','Cao','warning-high','3.0 giờ'],
-['NG03','TP. Thủ Đức','Phạm Văn Đồng','0.35 m','Trung bình','warning-medium','1.5 giờ'],
-['NG04','TP. Thủ Đức','Quốc Hương','0.65 m','Cao','warning-high','3.5 giờ'],
-['NG05','Tân Bình','Âu Cơ','0.20 m','Thấp','warning-low','1.0 giờ'],
-['NG06','Bình Tân','Kinh Dương Vương','0.50 m','Trung bình','warning-medium','2.0 giờ'],
-['NG07','Bình Thạnh','Điện Biên Phủ','0.25 m','Thấp','warning-low','1.0 giờ'],
-['NG08','Quận 7','Huỳnh Tấn Phát','0.70 m','Rất cao','warning-very-high','4.0 giờ'],
-['NG09','TP. Thủ Đức','Võ Văn Ngân','0.40 m','Trung bình','warning-medium','2.0 giờ'],
-['NG10','Tân Bình','Lạc Long Quân','0.45 m','Trung bình','warning-medium','2.0 giờ']
-]; %>
-<% warnings.forEach(w=>{ %>
-<tr>
-<td><strong><%=w[0]%></strong></td><td><%=w[1]%></td><td><%=w[2]%></td><td><%=w[3]%></td>
-<td><span class="warning-level <%=w[5]%>"><%=w[4]%></span></td><td><%=w[6]%></td>
-<td><span class="warning-status"><span class="status-dot"></span>Đang theo dõi</span></td>
-<td><button class="view-warning-btn" onclick="showWarning('<%=w[0]%>')">Xem</button></td>
-</tr>
-<% }) %>
-</tbody>
-</table>
-</div>
-</div>
-<div class="warning-info-grid">
-<div class="warning-info"><h3>🟢 Mức độ thấp</h3><p>Độ sâu ngập nhỏ, ảnh hưởng đến giao thông ở mức thấp.</p></div>
-<div class="warning-info"><h3>🟠 Mức độ trung bình</h3><p>Cần theo dõi tình hình ngập và khả năng thoát nước tại khu vực.</p></div>
-<div class="warning-info"><h3>🔴 Mức độ cao</h3><p>Khu vực có nguy cơ ảnh hưởng đáng kể đến giao thông và hoạt động dân cư.</p></div>
-</div>
-</main>
-</div>
-<script>
-function showWarning(code){
-alert("Thông tin cảnh báo tại điểm "+code+"\n\nDữ liệu đang được theo dõi trên hệ thống WebGIS.");
-}
-</script>
-</body>
-</html>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f1f6f7;color:#075f68}.webgis{display:flex;min-height:100vh}.sidebar{width:245px;min-width:245px;background:#176b45;color:white;display:flex;flex-direction:column;padding:24px 15px}.logo{padding:5px 12px 30px;border-bottom:1px solid #ffffff30}.logo strong{display:block;font-size:15px;line-height:1.5}.sidebar-menu{margin-top:25px}.menu-item,.sidebar-bottom a{display:flex;align-items:center;gap:12px;padding:12px 14px;margin-bottom:7px;color:#e5f4eb;text-decoration:none;border-radius:8px;font-size:13px}.menu-item:hover,.sidebar-bottom a:hover{background:#ffffff20;color:white}.menu-item.active{background:white;color:#176b45;font-weight:bold}.sidebar-bottom{margin-top:auto;padding-top:20px;border-top:1px solid #ffffff30}.warning-page{flex:1;min-width:0;padding:28px 35px 40px;overflow:auto}.warning-header{margin-bottom:22px}.warning-header h1{font-size:25px;margin:0 0 6px}.warning-header p{color:#718287;font-size:13px;margin:0}.warning-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-bottom:22px}.warning-stat,.warning-card{background:white;border:1px solid #e0ebec;border-radius:12px;box-shadow:0 4px 15px #16494d0d}.warning-stat{padding:17px;display:flex;align-items:center;gap:13px}.warning-icon{width:44px;height:44px;border-radius:10px;display:grid;place-items:center;font-size:20px}.all{background:#e4f1ff}.low{background:#e2f5ed}.medium{background:#fff1d7}.high{background:#ffe5e5}.warning-stat span{display:block;color:#7b898d;font-size:11px;margin-bottom:3px}.warning-stat strong{font-size:22px}.warning-card{overflow:hidden}.warning-card-header{padding:20px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #e6eeee}.warning-card-header h2{font-size:16px;margin:0}.warning-card-header span{font-size:11px;color:#899598}.warning-notice{margin:18px 20px;padding:14px 16px;background:#fff9e8;border:1px solid #f3e1ae;border-radius:8px;display:flex;gap:12px}.warning-notice-icon{font-size:20px}.warning-notice strong{font-size:12px}.warning-notice p{font-size:11px;color:#778286;margin:4px 0 0}.warning-table-wrapper{overflow:auto}.warning-table{width:100%;min-width:900px;border-collapse:collapse}.warning-table th{background:#edf7f6;color:#075f68;font-size:11px;text-align:left;padding:12px 14px}.warning-table td{color:#5d7074;font-size:11px;padding:12px 14px;border-bottom:1px solid #edf1f1}.warning-level{display:inline-block;padding:5px 10px;border-radius:20px;font-size:10px;font-weight:bold}.warning-low{background:#e2f5ed;color:#277c61}.warning-medium{background:#fff1d5;color:#9a6b18}.warning-high{background:#ffe3e3;color:#c44444}.warning-status{font-size:10px;color:#52706a}.status-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#35a87f;margin-right:5px}.search{margin:0 20px 15px;width:240px;height:34px;border:1px solid #dce5e1;border-radius:6px;padding:0 10px;font-size:11px}@media(max-width:1100px){.warning-stats{grid-template-columns:repeat(2,1fr)}}@media(max-width:750px){.sidebar{width:210px;min-width:210px}.warning-page{padding:20px}.warning-stats{grid-template-columns:1fr}}
+</style></head><body><div class="webgis"><aside class="sidebar"><div class="logo"><strong>Viện Phát triển Xã hội,</strong><strong>Môi trường và Nông nghiệp</strong></div><nav class="sidebar-menu">
+<a href="/dashboard" class="menu-item"><span>⌂</span>Trang chủ</a><a href="/map" class="menu-item"><span></span>Bản đồ</a><a href="/data" class="menu-item"><span></span>Dữ liệu ngập</a><a href="/warning" class="menu-item active"><span></span>Cảnh báo</a><a href="/statistics" class="menu-item"><span>▥</span>Thống kê</a></nav><div class="sidebar-bottom"><a href="#"><span></span>Giới thiệu</a><a href="/"><span></span>Đăng xuất</a></div></aside>
+<main class="warning-page"><div class="warning-header"><h1>Cảnh báo ngập</h1><p>Các điểm có nguy cơ ngập và mức độ cần theo dõi trên địa bàn Thành phố Hồ Chí Minh</p></div>
+<div class="warning-stats"><div class="warning-stat"><div class="warning-icon all">⚠️</div><div><span>Tổng cảnh báo</span><strong><%=stats.total%></strong></div></div><div class="warning-stat"><div class="warning-icon low">🟢</div><div><span>Mức độ thấp</span><strong><%=stats.low%></strong></div></div><div class="warning-stat"><div class="warning-icon medium">🟠</div><div><span>Mức độ trung bình</span><strong><%=stats.medium%></strong></div></div><div class="warning-stat"><div class="warning-icon high">🔴</div><div><span>Mức độ cao</span><strong><%=stats.high%></strong></div></div></div>
+<div class="warning-card"><div class="warning-card-header"><h2>Danh sách cảnh báo</h2><span>Dữ liệu năm 2026</span></div><div class="warning-notice"><div class="warning-notice-icon">⚠️</div><div><strong>Lưu ý về mức độ ngập</strong><p>Mức độ trong WebGIS được phân loại để phục vụ hiển thị và theo dõi dữ liệu; không phải ngưỡng cảnh báo chính thức.</p></div></div>
+<input class="search" id="search" placeholder="Tìm mã điểm hoặc tên đường..."><div class="warning-table-wrapper"><table class="warning-table" id="warningTable"><thead><tr><th>Mã điểm</th><th>Lưu vực</th><th>Vị trí</th><th>Độ sâu lớn nhất</th><th>Mức cảnh báo</th><th>Số lần ngập</th><th>Ghi nhận gần nhất</th><th>Trạng thái</th></tr></thead><tbody>
+<% floodData.forEach(r=>{ %><tr><td><strong><%=r.id%></strong></td><td><%=r.luu_vuc%></td><td><%=r.ten_duong%></td><td><%=r.muc_ngap_lon_nhat.toFixed(2)%> m</td><td><span class="warning-level warning-<%=r.muc_do_class%>"><%=r.muc_do%></span></td><td><%=r.so_lan_ngap%></td><td><%=r.lan_ngap.length?r.lan_ngap[r.lan_ngap.length-1].date:'—'%></td><td><span class="warning-status"><span class="status-dot"></span>Đang theo dõi</span></td></tr><% }) %>
+</tbody></table></div></div></main></div><script>
+const s=document.getElementById("search"),rows=[...document.querySelectorAll("#warningTable tbody tr")];s.oninput=()=>{let q=s.value.toLowerCase();rows.forEach(r=>r.style.display=r.innerText.toLowerCase().includes(q)?"":"none")};
+</script></body></html>
