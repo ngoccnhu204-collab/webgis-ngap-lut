@@ -54,15 +54,15 @@ h2{color:#176b45}
 <strong>Viện Phát triển Xã hội,Môi trường và Nông nghiệp</strong>
 </div>
 <nav class="menu">
-<a href="/dashboard" class="active">⌂ <span>Trang chủ</span></a>
-<a href="/map">🗺 <span>Bản đồ</span></a>
-<a href="/data">💧 <span>Dữ liệu ngập</span></a>
-<a href="/warning">⚠ <span>Cảnh báo</span></a>
-<a href="/statistics">▥ <span>Thống kê</span></a>
+<a href="/dashboard" class="active"><span>Trang chủ</span></a>
+<a href="/map"><span>Bản đồ</span></a>
+<a href="/data"> <span>Dữ liệu ngập</span></a>
+<a href="/warning"><span>Cảnh báo</span></a>
+<a href="/statistics"><span>Thống kê</span></a>
 </nav>
 <div class="bottom">
-<a href="#">ⓘ <span>Giới thiệu</span></a>
-<a href="/">↪ <span>Đăng xuất</span></a>
+<a href="#"><span>Giới thiệu</span></a>
+<a href="/"><span>Đăng xuất</span></a>
 </div>
 </aside>
 
@@ -83,17 +83,17 @@ h2{color:#176b45}
 
 <div class="grid">
 <div class="card"><div class="icon">🗺</div><h3>Bản đồ</h3><p>Xem vị trí các điểm ngập và mức độ ngập trên bản đồ Thành phố Hồ Chí Minh.</p><a class="go" href="/map">→</a></div>
-<div class="card"><div class="icon">💧</div><h3>Dữ liệu ngập</h3><p>Tra cứu thông tin về vị trí, độ sâu, thời gian và mức độ ngập.</p><a class="go" href="/data">→</a></div>
+<div class="card"><div class="icon">💧</div><h3>Dữ liệu ngập</h3><p>Tra cứu thông tin vị trí, phạm vi, độ sâu và số lần ghi nhận ngập.</p><a class="go" href="/climate">→</a></div>
 <div class="card"><div class="icon">⚠</div><h3>Cảnh báo</h3><p>Theo dõi các khu vực có nguy cơ ngập và các điểm ngập cần chú ý.</p><a class="go" href="/warning">→</a></div>
 <div class="card"><div class="icon">▥</div><h3>Thống kê</h3><p>Xem số liệu và biểu đồ thống kê tình hình ngập lụt.</p><a class="go" href="/statistics">→</a></div>
 </div>
 
-<div class="section"><h2>Tổng quan dữ liệu</h2><span>Cập nhật dữ liệu</span></div>
+<div class="section"><h2>Tổng quan dữ liệu</h2><span>Cập nhật dữ liệu năm 2026</span></div>
 <div class="grid">
-<div class="overview"><div class="label">Số điểm ngập</div><div class="value">10 <span class="unit">điểm</span></div></div>
-<div class="overview"><div class="label">Ngập mức cao</div><div class="value">3 <span class="unit">điểm</span></div></div>
-<div class="overview"><div class="label">Cảnh báo hiện tại</div><div class="value">10 <span class="unit">cảnh báo</span></div></div>
-<div class="overview"><div class="label">Khu vực theo dõi</div><div class="value">5 <span class="unit">khu vực</span></div></div>
+<div class="overview"><div class="label">Số điểm ngập</div><div class="value"><%=stats.total%> <span class="unit">điểm</span></div></div>
+<div class="overview"><div class="label">Ngập mức cao</div><div class="value"><%=stats.high%> <span class="unit">điểm</span></div></div>
+<div class="overview"><div class="label">Cảnh báo hiện tại</div><div class="value"><%=stats.events%> <span class="unit">lượt</span></div></div>
+<div class="overview"><div class="label">Khu vực theo dõi</div><div class="value"><%=stats.basins%> <span class="unit">lưu vực</span></div></div>
 </div>
 </div>
 </main>
