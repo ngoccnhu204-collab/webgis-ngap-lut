@@ -1,0 +1,784 @@
+[
+  {
+    "id": "NG001",
+    "ts": 1,
+    "luu_vuc": "Tân Hóa Lò Gốm",
+    "ten_duong": "An Dương Vương",
+    "phuong": "Phú Lâm + Bình Trị Đông",
+    "pham_vi_ngap_tu": "Tân Hòa Đông",
+    "pham_vi_ngap_den": "SN 958",
+    "tram_do": "",
+    "latitude": 10.744,
+    "longitude": 106.626,
+    "muc_ngap_lon_nhat": 0.1,
+    "muc_do": "Thấp",
+    "muc_do_class": "low",
+    "so_lan_ngap": 1,
+    "lan_ngap": [
+      {
+        "date": "2026-05-30",
+        "depth": 0.1
+      }
+    ]
+  },
+  {
+    "id": "NG002",
+    "ts": 2,
+    "luu_vuc": "Tân Hóa Lò Gốm",
+    "ten_duong": "Phan Anh",
+    "phuong": "Phú Thạnh + Bình Trị Đông",
+    "pham_vi_ngap_tu": "SN 105",
+    "pham_vi_ngap_den": "Tô Hiệu",
+    "tram_do": "",
+    "latitude": 10.756,
+    "longitude": 106.622,
+    "muc_ngap_lon_nhat": 0.1,
+    "muc_do": "Thấp",
+    "muc_do_class": "low",
+    "so_lan_ngap": 1,
+    "lan_ngap": [
+      {
+        "date": "2026-05-30",
+        "depth": 0.1
+      }
+    ]
+  },
+  {
+    "id": "NG003",
+    "ts": 3,
+    "luu_vuc": "Tây Thành Phố",
+    "ten_duong": "Tân Hoà Đông",
+    "phuong": "Bình Trị Đông",
+    "pham_vi_ngap_tu": "Số nhà 200",
+    "pham_vi_ngap_den": "Số nhà 286",
+    "tram_do": "",
+    "latitude": 10.756,
+    "longitude": 106.616,
+    "muc_ngap_lon_nhat": 0.1,
+    "muc_do": "Thấp",
+    "muc_do_class": "low",
+    "so_lan_ngap": 1,
+    "lan_ngap": [
+      {
+        "date": "2026-05-30",
+        "depth": 0.1
+      }
+    ]
+  },
+  {
+    "id": "NG004",
+    "ts": 4,
+    "luu_vuc": "Tây Thành Phố",
+    "ten_duong": "Tỉnh Lộ 10",
+    "phuong": "Bình Trị Đông, An Lạc",
+    "pham_vi_ngap_tu": "Số nhà 490",
+    "pham_vi_ngap_den": "Số nhà 546",
+    "tram_do": "",
+    "latitude": 10.75,
+    "longitude": 106.596,
+    "muc_ngap_lon_nhat": 0.1,
+    "muc_do": "Thấp",
+    "muc_do_class": "low",
+    "so_lan_ngap": 1,
+    "lan_ngap": [
+      {
+        "date": "2026-05-30",
+        "depth": 0.1
+      }
+    ]
+  },
+  {
+    "id": "NG005",
+    "ts": 5,
+    "luu_vuc": "Nam Thành Phố",
+    "ten_duong": "Phạm Hữu Lầu",
+    "phuong": "",
+    "pham_vi_ngap_tu": "Trường tiểu học Phú Mỹ",
+    "pham_vi_ngap_den": "Đường số 4",
+    "tram_do": "",
+    "latitude": 10.707,
+    "longitude": 106.715,
+    "muc_ngap_lon_nhat": 0.2,
+    "muc_do": "Trung bình",
+    "muc_do_class": "medium",
+    "so_lan_ngap": 2,
+    "lan_ngap": [
+      {
+        "date": "2026-05-30",
+        "depth": 0.1
+      },
+      {
+        "date": "2026-06-15",
+        "depth": 0.2
+      }
+    ]
+  },
+  {
+    "id": "NG006",
+    "ts": 6,
+    "luu_vuc": "Bắc Nhiêu Lộc",
+    "ten_duong": "Đinh Bộ Lĩnh",
+    "phuong": "Bình Thạnh",
+    "pham_vi_ngap_tu": "SN 230",
+    "pham_vi_ngap_den": "Nguyễn Xí",
+    "tram_do": "",
+    "latitude": 10.802,
+    "longitude": 106.712,
+    "muc_ngap_lon_nhat": 0.2,
+    "muc_do": "Trung bình",
+    "muc_do_class": "medium",
+    "so_lan_ngap": 2,
+    "lan_ngap": [
+      {
+        "date": "2026-06-11",
+        "depth": 0.2
+      },
+      {
+        "date": "2026-06-15",
+        "depth": 0.1
+      }
+    ]
+  },
+  {
+    "id": "NG007",
+    "ts": 7,
+    "luu_vuc": "Bắc Nhiêu Lộc",
+    "ten_duong": "Ung Văn Khiêm",
+    "phuong": "Thạnh mỹ Tây",
+    "pham_vi_ngap_tu": "Đài Liệt Sỹ",
+    "pham_vi_ngap_den": "Nguyễn Gia Trí",
+    "tram_do": "",
+    "latitude": 10.804,
+    "longitude": 106.718,
+    "muc_ngap_lon_nhat": 0.2,
+    "muc_do": "Trung bình",
+    "muc_do_class": "medium",
+    "so_lan_ngap": 2,
+    "lan_ngap": [
+      {
+        "date": "2026-06-11",
+        "depth": 0.2
+      },
+      {
+        "date": "2026-06-15",
+        "depth": 0.15
+      }
+    ]
+  },
+  {
+    "id": "NG008",
+    "ts": 8,
+    "luu_vuc": "Nam Tham Lương",
+    "ten_duong": "Lê Đức Thọ",
+    "phuong": "An Hội Đông",
+    "pham_vi_ngap_tu": "SN 1294",
+    "pham_vi_ngap_den": "SN 1167",
+    "tram_do": "",
+    "latitude": 10.839,
+    "longitude": 106.657,
+    "muc_ngap_lon_nhat": 0.15,
+    "muc_do": "Thấp",
+    "muc_do_class": "low",
+    "so_lan_ngap": 2,
+    "lan_ngap": [
+      {
+        "date": "2026-05-02",
+        "depth": 0.15
+      },
+      {
+        "date": "2026-07-29",
+        "depth": 0.12
+      }
+    ]
+  },
+  {
+    "id": "NG009",
+    "ts": 9,
+    "luu_vuc": "Nam Tham Lương",
+    "ten_duong": "Phan Huy Ích",
+    "phuong": "An Hội Tây",
+    "pham_vi_ngap_tu": "Bùi Quang Là",
+    "pham_vi_ngap_den": "Nguyễn Tư Giãn",
+    "tram_do": "",
+    "latitude": 10.831,
+    "longitude": 106.628,
+    "muc_ngap_lon_nhat": 0.12,
+    "muc_do": "Thấp",
+    "muc_do_class": "low",
+    "so_lan_ngap": 2,
+    "lan_ngap": [
+      {
+        "date": "2026-05-05",
+        "depth": 0.1
+      },
+      {
+        "date": "2026-06-21",
+        "depth": 0.12
+      }
+    ]
+  },
+  {
+    "id": "NG010",
+    "ts": 10,
+    "luu_vuc": "Nam Tham Lương",
+    "ten_duong": "Phạm Văn Chiêu",
+    "phuong": "An Hội Tây",
+    "pham_vi_ngap_tu": "Hẻm 237",
+    "pham_vi_ngap_den": "Đường số 59",
+    "tram_do": "",
+    "latitude": 10.848,
+    "longitude": 106.635,
+    "muc_ngap_lon_nhat": 0.12,
+    "muc_do": "Thấp",
+    "muc_do_class": "low",
+    "so_lan_ngap": 3,
+    "lan_ngap": [
+      {
+        "date": "2026-05-30",
+        "depth": 0.1
+      },
+      {
+        "date": "2026-06-11",
+        "depth": 0.12
+      },
+      {
+        "date": "2026-07-29",
+        "depth": 0.12
+      }
+    ]
+  },
+  {
+    "id": "NG011",
+    "ts": 11,
+    "luu_vuc": "Nam Tham Lương",
+    "ten_duong": "Bình Quới",
+    "phuong": "SN 450",
+    "pham_vi_ngap_tu": "Hẻm 1081",
+    "pham_vi_ngap_den": "",
+    "tram_do": "",
+    "latitude": 10.806,
+    "longitude": 106.744,
+    "muc_ngap_lon_nhat": 0.14,
+    "muc_do": "Thấp",
+    "muc_do_class": "low",
+    "so_lan_ngap": 1,
+    "lan_ngap": [
+      {
+        "date": "2026-06-15",
+        "depth": 0.14
+      }
+    ]
+  },
+  {
+    "id": "NG012",
+    "ts": 12,
+    "luu_vuc": "Bắc Thành phố",
+    "ten_duong": "Song hành QL22",
+    "phuong": "Bà Điểm",
+    "pham_vi_ngap_tu": "Nguyễn Ảnh Thủ",
+    "pham_vi_ngap_den": "SN 14/4C",
+    "tram_do": "",
+    "latitude": 10.851,
+    "longitude": 106.585,
+    "muc_ngap_lon_nhat": 0.1,
+    "muc_do": "Thấp",
+    "muc_do_class": "low",
+    "so_lan_ngap": 1,
+    "lan_ngap": [
+      {
+        "date": "2026-06-02",
+        "depth": 0.1
+      }
+    ]
+  },
+  {
+    "id": "NG013",
+    "ts": 13,
+    "luu_vuc": "Bắc Thành phố",
+    "ten_duong": "Võ Văn Kiệt",
+    "phuong": "An Lạc",
+    "pham_vi_ngap_tu": "Khu giao lộ Võ Văn Kiệt - Hồ Học Lãm",
+    "pham_vi_ngap_den": "",
+    "tram_do": "",
+    "latitude": 10.738,
+    "longitude": 106.615,
+    "muc_ngap_lon_nhat": 0.15,
+    "muc_do": "Thấp",
+    "muc_do_class": "low",
+    "so_lan_ngap": 4,
+    "lan_ngap": [
+      {
+        "date": "2026-05-02",
+        "depth": 0.15
+      },
+      {
+        "date": "2026-05-29",
+        "depth": 0.1
+      },
+      {
+        "date": "2026-06-11",
+        "depth": 0.15
+      },
+      {
+        "date": "2026-06-17",
+        "depth": 0.1
+      }
+    ]
+  },
+  {
+    "id": "NG014",
+    "ts": 14,
+    "luu_vuc": "Đông Thành Phố",
+    "ten_duong": "Thảo Điền",
+    "phuong": "An Khánh",
+    "pham_vi_ngap_tu": "Đường Xuân Thủy",
+    "pham_vi_ngap_den": "Xa Lộ hà Nội",
+    "tram_do": "",
+    "latitude": 10.802,
+    "longitude": 106.739,
+    "muc_ngap_lon_nhat": 0.1,
+    "muc_do": "Thấp",
+    "muc_do_class": "low",
+    "so_lan_ngap": 1,
+    "lan_ngap": [
+      {
+        "date": "2026-06-16",
+        "depth": 0.1
+      }
+    ]
+  },
+  {
+    "id": "NG015",
+    "ts": 15,
+    "luu_vuc": "Đông Thành Phố",
+    "ten_duong": "Quốc Hương",
+    "phuong": "An Khánh",
+    "pham_vi_ngap_tu": "Đường 41",
+    "pham_vi_ngap_den": "Lê Văn Miến",
+    "tram_do": "Th3o",
+    "latitude": 10.804,
+    "longitude": 106.737,
+    "muc_ngap_lon_nhat": 0.2,
+    "muc_do": "Trung bình",
+    "muc_do_class": "medium",
+    "so_lan_ngap": 4,
+    "lan_ngap": [
+      {
+        "date": "2026-05-02",
+        "depth": 0.2
+      },
+      {
+        "date": "2026-06-15",
+        "depth": 0.1
+      },
+      {
+        "date": "2026-06-16",
+        "depth": 0.2
+      },
+      {
+        "date": "2026-06-17",
+        "depth": 0.15
+      }
+    ]
+  },
+  {
+    "id": "NG016",
+    "ts": 16,
+    "luu_vuc": "Đông Thành Phố",
+    "ten_duong": "Lê Văn Việt",
+    "phuong": "Tăng Nhơn Phú",
+    "pham_vi_ngap_tu": "Đình Phong Phú",
+    "pham_vi_ngap_den": "Hẻm 201",
+    "tram_do": "",
+    "latitude": 10.841,
+    "longitude": 106.793,
+    "muc_ngap_lon_nhat": 0.15,
+    "muc_do": "Thấp",
+    "muc_do_class": "low",
+    "so_lan_ngap": 4,
+    "lan_ngap": [
+      {
+        "date": "2026-05-02",
+        "depth": 0.15
+      },
+      {
+        "date": "2026-05-30",
+        "depth": 0.15
+      },
+      {
+        "date": "2026-06-15",
+        "depth": 0.1
+      },
+      {
+        "date": "2026-07-15",
+        "depth": 0.1
+      }
+    ]
+  },
+  {
+    "id": "NG017",
+    "ts": 17,
+    "luu_vuc": "Đông Thành Phố",
+    "ten_duong": "Dương Văn Cam",
+    "phuong": "Thủ Đức",
+    "pham_vi_ngap_tu": "Lê Văn Tách",
+    "pham_vi_ngap_den": "Kha Vặn Cân",
+    "tram_do": "",
+    "latitude": 10.846,
+    "longitude": 106.758,
+    "muc_ngap_lon_nhat": 0.25,
+    "muc_do": "Trung bình",
+    "muc_do_class": "medium",
+    "so_lan_ngap": 1,
+    "lan_ngap": [
+      {
+        "date": "2026-05-02",
+        "depth": 0.25
+      }
+    ]
+  },
+  {
+    "id": "NG018",
+    "ts": 18,
+    "luu_vuc": "Đông Thành Phố",
+    "ten_duong": "Đặng thị Rành",
+    "phuong": "Thủ Đức",
+    "pham_vi_ngap_tu": "Dương Văn Cam",
+    "pham_vi_ngap_den": "Tô Ngọc Vân",
+    "tram_do": "",
+    "latitude": 10.852,
+    "longitude": 106.766,
+    "muc_ngap_lon_nhat": 0.25,
+    "muc_do": "Trung bình",
+    "muc_do_class": "medium",
+    "so_lan_ngap": 2,
+    "lan_ngap": [
+      {
+        "date": "2026-05-02",
+        "depth": 0.25
+      },
+      {
+        "date": "2026-07-29",
+        "depth": 0.15
+      }
+    ]
+  },
+  {
+    "id": "NG019",
+    "ts": 19,
+    "luu_vuc": "Đông Thành Phố",
+    "ten_duong": "Tô Ngọc Vân",
+    "phuong": "Thủ Đức",
+    "pham_vi_ngap_tu": "Linh Đông",
+    "pham_vi_ngap_den": "Cửa xả suối Linh Tây",
+    "tram_do": "",
+    "latitude": 10.857,
+    "longitude": 106.752,
+    "muc_ngap_lon_nhat": 0.5,
+    "muc_do": "Cao",
+    "muc_do_class": "high",
+    "so_lan_ngap": 3,
+    "lan_ngap": [
+      {
+        "date": "2026-05-02",
+        "depth": 0.4
+      },
+      {
+        "date": "2026-06-15",
+        "depth": 0.1
+      },
+      {
+        "date": "2026-07-29",
+        "depth": 0.5
+      }
+    ]
+  },
+  {
+    "id": "NG020",
+    "ts": 20,
+    "luu_vuc": "Đông Thành Phố",
+    "ten_duong": "Kha Vạn Cân",
+    "phuong": "TP Thủ Đức",
+    "pham_vi_ngap_tu": "Dương Văn Cam",
+    "pham_vi_ngap_den": "Bưu điện Thủ Đức",
+    "tram_do": "",
+    "latitude": 10.85,
+    "longitude": 106.765,
+    "muc_ngap_lon_nhat": 0.15,
+    "muc_do": "Thấp",
+    "muc_do_class": "low",
+    "so_lan_ngap": 1,
+    "lan_ngap": [
+      {
+        "date": "2026-05-02",
+        "depth": 0.15
+      }
+    ]
+  },
+  {
+    "id": "NG021",
+    "ts": 21,
+    "luu_vuc": "Đông Thành Phố",
+    "ten_duong": "Hồ Văn Tư",
+    "phuong": "Thủ Đức",
+    "pham_vi_ngap_tu": "Kha Vạn Cân",
+    "pham_vi_ngap_den": "Công an P. Trường Thọ",
+    "tram_do": "",
+    "latitude": 10.841,
+    "longitude": 106.773,
+    "muc_ngap_lon_nhat": 0.3,
+    "muc_do": "Trung bình",
+    "muc_do_class": "medium",
+    "so_lan_ngap": 1,
+    "lan_ngap": [
+      {
+        "date": "2026-05-02",
+        "depth": 0.3
+      }
+    ]
+  },
+  {
+    "id": "NG022",
+    "ts": 22,
+    "luu_vuc": "Đông Thành Phố",
+    "ten_duong": "Quốc lộ 13",
+    "phuong": "Hiệp Bình",
+    "pham_vi_ngap_tu": "Giày Gia Định",
+    "pham_vi_ngap_den": "Ngã ba Hiệp Bình",
+    "tram_do": "",
+    "latitude": 10.843,
+    "longitude": 106.717,
+    "muc_ngap_lon_nhat": 0.15,
+    "muc_do": "Thấp",
+    "muc_do_class": "low",
+    "so_lan_ngap": 3,
+    "lan_ngap": [
+      {
+        "date": "2026-05-02",
+        "depth": 0.15
+      },
+      {
+        "date": "2026-06-15",
+        "depth": 0.1
+      },
+      {
+        "date": "2026-07-15",
+        "depth": 0.1
+      }
+    ]
+  },
+  {
+    "id": "NG023",
+    "ts": 23,
+    "luu_vuc": "Đông Thành Phố",
+    "ten_duong": "Hiệp Bình",
+    "phuong": "Hiệp Bình",
+    "pham_vi_ngap_tu": "Đường số 1",
+    "pham_vi_ngap_den": "Trường THCS Hiệp Bình",
+    "tram_do": "",
+    "latitude": 10.842,
+    "longitude": 106.715,
+    "muc_ngap_lon_nhat": 0.15,
+    "muc_do": "Thấp",
+    "muc_do_class": "low",
+    "so_lan_ngap": 2,
+    "lan_ngap": [
+      {
+        "date": "2026-06-02",
+        "depth": 0.1
+      },
+      {
+        "date": "2026-07-15",
+        "depth": 0.15
+      }
+    ]
+  },
+  {
+    "id": "NG024",
+    "ts": 24,
+    "luu_vuc": "Đông Thành Phố",
+    "ten_duong": "Tỉnh lộ 43",
+    "phuong": "Tam Bình",
+    "pham_vi_ngap_tu": "QL1A",
+    "pham_vi_ngap_den": "Bình Chiểu",
+    "tram_do": "",
+    "latitude": 10.873,
+    "longitude": 106.718,
+    "muc_ngap_lon_nhat": 0.35,
+    "muc_do": "Trung bình",
+    "muc_do_class": "medium",
+    "so_lan_ngap": 4,
+    "lan_ngap": [
+      {
+        "date": "2026-05-02",
+        "depth": 0.35
+      },
+      {
+        "date": "2026-06-15",
+        "depth": 0.1
+      },
+      {
+        "date": "2026-07-15",
+        "depth": 0.1
+      },
+      {
+        "date": "2026-07-29",
+        "depth": 0.12
+      }
+    ]
+  },
+  {
+    "id": "NG025",
+    "ts": 25,
+    "luu_vuc": "Đông Thành Phố",
+    "ten_duong": "Lê Thị Hoa",
+    "phuong": "Tâm Bình",
+    "pham_vi_ngap_tu": "Tỉnh lộ 43",
+    "pham_vi_ngap_den": "SN 23",
+    "tram_do": "",
+    "latitude": 10.875,
+    "longitude": 106.733,
+    "muc_ngap_lon_nhat": 0.5,
+    "muc_do": "Cao",
+    "muc_do_class": "high",
+    "so_lan_ngap": 2,
+    "lan_ngap": [
+      {
+        "date": "2026-05-02",
+        "depth": 0.5
+      },
+      {
+        "date": "2026-06-15",
+        "depth": 0.1
+      }
+    ]
+  },
+  {
+    "id": "NG026",
+    "ts": 26,
+    "luu_vuc": "Đông Thành Phố",
+    "ten_duong": "DT743",
+    "phuong": "An Phú",
+    "pham_vi_ngap_tu": "Bình Chuẩn 64",
+    "pham_vi_ngap_den": "Ngã tư miếu ông Cù",
+    "tram_do": "",
+    "latitude": 10.965,
+    "longitude": 106.731,
+    "muc_ngap_lon_nhat": 0.4,
+    "muc_do": "Cao",
+    "muc_do_class": "high",
+    "so_lan_ngap": 3,
+    "lan_ngap": [
+      {
+        "date": "2026-05-30",
+        "depth": 0.4
+      },
+      {
+        "date": "2026-06-02",
+        "depth": 0.2
+      },
+      {
+        "date": "2026-06-18",
+        "depth": 0.2
+      }
+    ]
+  },
+  {
+    "id": "NG027",
+    "ts": 27,
+    "luu_vuc": "Đông Thành Phố",
+    "ten_duong": "Nguyễn Duy Trinh",
+    "phuong": "Bình Trưng",
+    "pham_vi_ngap_tu": "Nguyễn Tư Nghiêm",
+    "pham_vi_ngap_den": "Nguyễn Tuyển",
+    "tram_do": "",
+    "latitude": 10.791,
+    "longitude": 106.803,
+    "muc_ngap_lon_nhat": 0.2,
+    "muc_do": "Trung bình",
+    "muc_do_class": "medium",
+    "so_lan_ngap": 3,
+    "lan_ngap": [
+      {
+        "date": "2026-05-30",
+        "depth": 0.2
+      },
+      {
+        "date": "2026-06-15",
+        "depth": 0.1
+      },
+      {
+        "date": "2026-06-16",
+        "depth": 0.1
+      }
+    ]
+  },
+  {
+    "id": "NG028",
+    "ts": 28,
+    "luu_vuc": "Đông Thành Phố",
+    "ten_duong": "Cách mạng tháng 8",
+    "phuong": "",
+    "pham_vi_ngap_tu": "An Thạnh 07",
+    "pham_vi_ngap_den": "Cầu Trăng",
+    "tram_do": "",
+    "latitude": 10.963,
+    "longitude": 106.651,
+    "muc_ngap_lon_nhat": 0.3,
+    "muc_do": "Trung bình",
+    "muc_do_class": "medium",
+    "so_lan_ngap": 3,
+    "lan_ngap": [
+      {
+        "date": "2026-06-02",
+        "depth": 0.15
+      },
+      {
+        "date": "2026-06-11",
+        "depth": 0.3
+      },
+      {
+        "date": "2026-06-18",
+        "depth": 0.15
+      }
+    ]
+  },
+  {
+    "id": "NG029",
+    "ts": 29,
+    "luu_vuc": "Đông Thành Phố",
+    "ten_duong": "Đường QL1K",
+    "phuong": "",
+    "pham_vi_ngap_tu": "Đường D1A",
+    "pham_vi_ngap_den": "Rạch Cái Cầu",
+    "tram_do": "",
+    "latitude": 10.895,
+    "longitude": 106.805,
+    "muc_ngap_lon_nhat": 0.3,
+    "muc_do": "Trung bình",
+    "muc_do_class": "medium",
+    "so_lan_ngap": 5,
+    "lan_ngap": [
+      {
+        "date": "2026-06-02",
+        "depth": 0.15
+      },
+      {
+        "date": "2026-06-11",
+        "depth": 0.3
+      },
+      {
+        "date": "2026-06-18",
+        "depth": 0.15
+      },
+      {
+        "date": "2026-07-29",
+        "depth": 0.1
+      },
+      {
+        "date": "2026-09-04",
+        "depth": 0.1
+      }
+    ]
+  }
+]
