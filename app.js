@@ -4,7 +4,7 @@ const fs=require("fs");
 
 const app=express();
 const PORT=process.env.PORT||3000;
-const floodData=JSON.parse(fs.readFileSync(path.join(__dirname,"public/data/flood-data.json"),"utf8"));
+const floodData=JSON.parse(fs.readFileSync(path.join(__dirname,"public/flood-data.json"),"utf8"));
 
 app.set("view engine","ejs");
 app.set("views",path.join(__dirname,"views"));
