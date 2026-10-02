@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -6,151 +5,94 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Bản đồ ngập lụt - WebGIS TP.HCM</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-<link rel="stylesheet" href="/css/style.css">
 <style>
-*{box-sizing:border-box}
-.map-page{flex:1;min-width:0;padding:35px 42px;background:#f7f9f8;min-height:100vh}
-.map-page h1{color:#19332a;font-size:25px;margin:0 0 8px}
-.map-page>p{color:#7a8580;font-size:13px;margin:0 0 28px}
-.map-card{background:#fff;border:1px solid #e4e9e6;border-radius:10px;overflow:hidden;width:100%;box-shadow:0 2px 8px #00000008}
-.map-head{padding:18px 22px;display:flex;justify-content:space-between;align-items:center}
-.map-head h2{font-size:15px;color:#28483b;margin:0}
-.map-head b{background:#dff4e8;color:#17824d;padding:7px 11px;border-radius:20px;font-size:11px}
-.map-tools{display:flex!important;flex-direction:row!important;align-items:flex-end!important;gap:14px!important;flex-wrap:wrap!important;padding:18px 22px!important;background:#fff!important;border:0!important;border-top:1px solid #edf0ee!important;border-bottom:1px solid #edf0ee!important;width:100%!important;height:auto!important}
-.map-tools h3{background:#176b45;color:#fff;padding:11px;margin:0;font-size:12px;border-radius:6px;white-space:nowrap}
-.map-tools label{display:block;color:#52635a;font-size:11px;margin-bottom:5px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#f7f9f8;color:#263238}
+.webgis{display:flex;min-height:100vh}
+.sidebar{width:245px;min-width:245px;background:#176b45;color:#fff;display:flex;flex-direction:column;padding:24px 15px}
+.logo{padding:5px 12px 30px;border-bottom:1px solid #ffffff30}
+.logo strong{display:block;font-size:15px;line-height:1.5}
+.sidebar-menu{margin-top:25px}
+.menu-item,.sidebar-bottom a{display:flex;align-items:center;gap:12px;padding:12px 14px;margin-bottom:7px;color:#e5f4eb;text-decoration:none;border-radius:8px;font-size:13px}
+.menu-item:hover,.sidebar-bottom a:hover{background:#ffffff20;color:#fff}
+.menu-item.active{background:#fff;color:#176b45;font-weight:bold}
+.sidebar-bottom{margin-top:auto;padding-top:20px;border-top:1px solid #ffffff30}
+.map-page{flex:1;min-width:0;padding:35px 42px;background:#f7f9f8;overflow-y:auto}
+.page-title h1{margin:0 0 8px;font-size:25px;color:#19332a}
+.page-title p{margin:0 0 28px;font-size:13px;color:#7a8580}
+.map-card{background:#fff;border:1px solid #e4e9e6;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px #00000008}
+.map-head{padding:18px 22px;border-bottom:1px solid #edf0ee;font-size:15px;font-weight:bold;color:#28483b;display:flex;justify-content:space-between}
+.count{background:#dff4e8;color:#17824d;padding:7px 11px;border-radius:20px;font-size:11px}
+.map-tools{display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap;padding:18px 22px;border-bottom:1px solid #edf0ee}
+.map-tools label{font-size:11px;color:#52635a;display:block;margin-bottom:5px}
 .map-tools select,.map-tools input{width:170px;height:36px;padding:8px;border:1px solid #d7e1e2;border-radius:6px;background:#fff;font-size:12px}
-.map-tools button{height:36px;padding:0 15px;border:0;border-radius:6px;background:#176b45;color:#fff;cursor:pointer;white-space:nowrap}
-.map-wrap{height:570px!important;width:100%!important;position:relative!important;overflow:hidden!important}
-#map{height:100%!important;width:100%!important}
-.map-legend{display:flex!important;gap:22px;align-items:center;padding:15px 20px;background:#fff!important;border-top:1px solid #e8eeee!important;font-size:12px;color:#59696c;position:static!important;width:100%!important;height:auto!important}
-.dot{display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;vertical-align:middle}
+.map-tools button{height:36px;padding:0 15px;border:0;border-radius:6px;background:#176b45;color:#fff;font-size:12px;font-weight:bold;cursor:pointer}
+.map-wrap{height:570px;position:relative}
+#map{height:100%;width:100%}
+.map-legend{display:flex;gap:16px;padding:12px 22px;font-size:11px;color:#63706b}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px}
 .low{background:#35a87f}.mid{background:#f1ae35}.high{background:#e85b5b}
-@media(max-width:1100px){
-.map-tools{flex-wrap:wrap!important}
-}
-@media(max-width:900px){
-.map-page{margin-left:0;padding:20px}
-}
-@media(max-width:600px){
-.map-tools{display:grid!important;grid-template-columns:1fr!important}
-.map-tools select,.map-tools input,.map-tools button{width:100%}
-.map-wrap{height:600px!important}
-.map-legend{flex-wrap:wrap}
-}
+.note{padding:0 22px 14px;color:#8a948f;font-size:10px}
+@media(max-width:800px){.sidebar{width:210px;min-width:210px}.map-page{padding:25px 20px}.map-tools{display:grid;grid-template-columns:1fr}.map-tools select,.map-tools input,.map-tools button{width:100%}.map-wrap{height:500px}}
 </style>
 </head>
 <body>
 <div class="webgis">
 <aside class="sidebar">
-<div class="logo"><div class="logo-text">
-<strong>Viện Phát triển Xã hội,</strong>
-<strong>Môi trường và Nông nghiệp</strong>
-</div></div>
+<div class="logo"><strong>Viện Phát triển Xã hội,</strong><strong>Môi trường và Nông nghiệp</strong></div>
 <nav class="sidebar-menu">
-<a href="/dashboard" class="menu-item"><span class="menu-icon">⌂</span><span>Trang chủ</span></a>
-<a href="/map" class="menu-item active"><span class="menu-icon">🗺</span><span>Bản đồ</span></a>
-<a href="/data" class="menu-item"><span class="menu-icon">🌊</span><span>Dữ liệu ngập</span></a>
-<a href="/warning" class="menu-item"><span class="menu-icon">⚠</span><span>Cảnh báo</span></a>
-<a href="/statistics" class="menu-item"><span class="menu-icon">▥</span><span>Thống kê</span></a>
+<a href="/dashboard" class="menu-item"><span></span>Trang chủ</a>
+<a href="/map" class="menu-item active"><span></span>Bản đồ</a>
+<a href="/data" class="menu-item"><span></span>Dữ liệu ngập</a>
+<a href="/warning" class="menu-item"><span></span>Cảnh báo</a>
+<a href="/statistics" class="menu-item"><span></span>Thống kê</a>
 </nav>
 <div class="sidebar-bottom">
-<a href="#"><span>ⓘ</span>Giới thiệu</a><a href="/"><span>↪</span>Đăng xuất</a></div>
+<a href="#"><span>ⓘ</span>Giới thiệu</a>
+<a href="/"><span>↪</span>Đăng xuất</a>
+</div>
 </aside>
 <main class="map-page">
+<div class="page-title">
 <h1>Bản đồ ngập lụt</h1>
 <p>Theo dõi vị trí và mức độ ngập tại Thành phố Hồ Chí Minh</p>
+</div>
 <div class="map-card">
-<div class="map-head">
-<h2>🗺 Bản đồ các điểm ngập</h2>
-<b>6 điểm ngập</b>
-</div>
+<div class="map-head">🗺 Bản đồ các điểm ngập <span class="count"><%=stats.total%> điểm ngập</span></div>
 <div class="map-tools">
-<h3>CÔNG CỤ QUẢN LÝ BẢN ĐỒ</h3>
-<div><label>Khu vực</label>
-<select id="district">
-<option value="">Tất cả khu vực</option>
-<option>Bình Thạnh</option>
-<option>Quận 7</option>
-<option>TP. Thủ Đức</option>
-<option>Tân Bình</option>
-<option>Bình Tân</option>
-</select></div>
-
-<div><label>Mức độ ngập</label>
-<select id="level">
-<option value="">Tất cả mức độ</option>
-<option>Thấp</option>
-<option>Trung bình</option>
-<option>Cao</option>
-</select></div>
-<div><label>Tìm kiếm điểm ngập</label>
-<input id="search" placeholder="Ví dụ: NG01">
-</div>
+<div><label>Khu vực / lưu vực</label><select id="basin"><option value="">Tất cả khu vực</option></select></div>
+<div><label>Mức độ ngập</label><select id="level"><option value="">Tất cả mức độ</option><option>Thấp</option><option>Trung bình</option><option>Cao</option></select></div>
+<div><label>Tìm kiếm điểm</label><input id="search" placeholder="NG001 hoặc tên đường"></div>
 <button id="reset">Đặt lại bộ lọc</button>
 </div>
-<div class="map-wrap">
-<div id="map"></div>
-</div>
+<div class="map-wrap"><div id="map"></div></div>
 <div class="map-legend">
 <b>Mức độ ngập:</b>
 <span><i class="dot low"></i>Thấp</span>
 <span><i class="dot mid"></i>Trung bình</span>
 <span><i class="dot high"></i>Cao</span>
 </div>
+<div class="note">Tọa độ trên bản đồ là vị trí đại diện cho tuyến đường/khu vực trong bộ dữ liệu, dùng để hiển thị không gian trên WebGIS.</div>
 </div>
 </main>
 </div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
-const map=L.map('map').setView([10.8231,106.6297],11);
-const road=L.tileLayer(
-'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-{maxZoom:19,attribution:'© OpenStreetMap'}
-);
-const satellite=L.tileLayer(
-'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
-{maxZoom:19,attribution:'© Esri'}
-);
-satellite.addTo(map);
-L.control.layers({
-'🛰 Bản đồ vệ tinh':satellite,
-'🗺 Bản đồ đường':road
-}).addTo(map);
-const points=[
-['NG01','Đường Nguyễn Hữu Cảnh','Bình Thạnh',.3,'Trung bình',10.7885,106.7218],
-['NG02','Đường Lê Văn Lương','Quận 7',.45,'Cao',10.7145,106.7058],
-['NG03','Đường Phạm Văn Đồng','TP. Thủ Đức',.25,'Trung bình',10.8238,106.7575],
-['NG04','Đường Quốc Hương','TP. Thủ Đức',.6,'Cao',10.8035,106.7355],
-['NG05','Đường Âu Cơ','Tân Bình',.2,'Thấp',10.785,106.642],
-['NG06','Đường Kinh Dương Vương','Bình Tân',.5,'Cao',10.753,106.605]
-];
+const data=<%-JSON.stringify(floodData)%>;
+const map=L.map("map").setView([10.8231,106.6297],11);
+const road=L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:19,attribution:"© OpenStreetMap"});
+const sat=L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",{maxZoom:19,attribution:"© Esri"});
+road.addTo(map);
+L.control.layers({"🗺 Bản đồ đường":road,"🛰 Bản đồ vệ tinh":sat}).addTo(map);
 let markers=[];
-const color=x=>x==='Cao'?'#e85b5b':x==='Trung bình'?'#f1ae35':'#35a87f';
-function show(data){
-markers.forEach(m=>map.removeLayer(m));
-markers=data.map(p=>L.circleMarker([p[5],p[6]],{
-radius:9,fillColor:color(p[4]),color:'#fff',
-weight:2,fillOpacity:.9
-}).bindPopup(`<b>${p[0]}</b><br>${p[1]}<br>Khu vực: ${p[2]}<br>Độ sâu: ${p[3]} m<br>Mức độ: ${p[4]}`).addTo(map));
-}
-function filter(){
-let d=district.value,l=level.value,s=search.value.toLowerCase();
-show(points.filter(p=>
-(!d||p[2]===d)&&
-(!l||p[4]===l)&&
-(!s||p[0].toLowerCase().includes(s)||p[1].toLowerCase().includes(s))
-));
-}
-function resetMap(){
-district.value=level.value=search.value='';
-show(points);
-map.setView([10.8231,106.6297],11);
-}
-district.onchange=level.onchange=search.oninput=filter;
-reset.onclick=resetMap;
-show(points);
-setTimeout(()=>map.invalidateSize(),300);
+const color=x=>x==="Cao"?"#e85b5b":x==="Trung bình"?"#f1ae35":"#35a87f";
+function show(list){markers.forEach(m=>map.removeLayer(m));markers=list.map(p=>L.circleMarker([p.latitude,p.longitude],{radius:8,fillColor:color(p.muc_do),color:"#fff",weight:1.5,fillOpacity:.9}).bindPopup(`<b>${p.id}</b><br>${p.ten_duong}<br>Lưu vực: ${p.luu_vuc}<br>Độ sâu lớn nhất: ${p.muc_ngap_lon_nhat.toFixed(2)} m<br>Mức độ: ${p.muc_do}<br>Số lần ngập: ${p.so_lan_ngap}`).addTo(map))}
+const basin=document.getElementById("basin"),level=document.getElementById("level"),search=document.getElementById("search");
+[...new Set(data.map(x=>x.luu_vuc))].forEach(x=>{const o=document.createElement("option");o.value=x;o.textContent=x;basin.appendChild(o)});
+function filter(){const b=basin.value,l=level.value,q=search.value.toLowerCase();show(data.filter(p=>(!b||p.luu_vuc===b)&&(!l||p.muc_do===l)&&(!q||p.id.toLowerCase().includes(q)||p.ten_duong.toLowerCase().includes(q)||(p.phuong&&p.phuong.toLowerCase().includes(q)))))}
+basin.onchange=level.onchange=search.oninput=filter;
+document.getElementById("reset").onclick=()=>{basin.value=level.value=search.value="";show(data);map.setView([10.8231,106.6297],11)};
+show(data);setTimeout(()=>map.invalidateSize(),300);
 </script>
 </body>
 </html>
