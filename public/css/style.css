@@ -62,3 +62,63 @@ function searchPoint(){let q=document.getElementById("search").value.toUpperCase
 </script>
 </body>
 </html>
+/* Mặc định trên Laptop: Ẩn nút đóng/mở menu và lớp phủ */
+.mobile-menu-btn,
+.sidebar-overlay {
+  display: none;
+}
+
+/* Khi xem trên Điện thoại (màn hình <= 768px) */
+@media (max-width: 768px) {
+  .mobile-menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    z-index: 1002;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    background: #176b45;
+    color: #fff;
+    font-size: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    cursor: pointer;
+  }
+
+  /* Giấu thanh sidebar sang bên trái màn hình */
+  .sidebar {
+    position: fixed !important;
+    top: 0;
+    left: -260px;
+    height: 100vh;
+    width: 245px !important;
+    min-width: 245px !important;
+    z-index: 1003;
+    transition: left 0.28s ease;
+    box-shadow: 4px 0 15px rgba(0,0,0,0.25);
+  }
+
+  /* Khi bấm nút thì trượt sidebar ra */
+  .sidebar.open {
+    left: 0;
+  }
+
+  /* Lớp nền mờ phía sau khi mở menu trên điện thoại */
+  .sidebar-overlay.open {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1001;
+  }
+
+  /* Cho phần nội dung chính rộng full 100% màn hình điện thoại */
+  .main, .main-content {
+    width: 100% !important;
+    padding: 60px 14px 24px !important;
+  }
+}
