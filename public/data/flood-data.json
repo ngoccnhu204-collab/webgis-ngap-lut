@@ -665,8 +665,8 @@
     "latitude": 10.965,
     "longitude": 106.731,
     "muc_ngap_lon_nhat": 0.4,
-    "muc_do": "Cao",
-    "muc_do_class": "high",
+    "muc_do": "Trung bình",
+    "muc_do_class": "medium",
     "so_lan_ngap": 3,
     "lan_ngap": [
       {
